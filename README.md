@@ -12,3 +12,5 @@
 - Python3.8+
 # Modules Used
 - pystyle (pip install pystyle)
+# Alert !
+- Im not responsable of any of your acts.
