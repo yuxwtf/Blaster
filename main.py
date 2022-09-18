@@ -122,7 +122,7 @@ def main():
     exploiters = Exploits(str(targeturl))
     print(pystyle.Colors.orange, pystyle.Center.XCenter(f'\n\n ------------- XSS ------------- \n\n'), pystyle.Colors.white)
     exploiters.xss()
-    print(pystyle.Colors.yellow, pystyle.Center.XCenter(f'\n\n ------------- FOUND {str(exploiters.sfile_nb)} XSS EXPLOIT ------------- \n\n'), pystyle.Colors.white)
+    print(pystyle.Colors.yellow, pystyle.Center.XCenter(f'\n\n ------------- FOUND {str(exploiters.xss_nb)} XSS EXPLOIT ------------- \n\n'), pystyle.Colors.white)
     print(pystyle.Colors.orange, pystyle.Center.XCenter(f'\n\n ------------- SQL ------------- \n\n'), pystyle.Colors.white)
     exploiters.sql()
     print(pystyle.Colors.yellow, pystyle.Center.XCenter(f'\n\n ------------- FOUND {str(exploiters.exploit_nb)} SQL EXPLOIT ------------- \n\n'), pystyle.Colors.white)
