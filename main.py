@@ -35,8 +35,6 @@ class Exploits:
             if self.payload in exploit:
                 self.xss_nb = self.xss_nb + 1
                 print(pystyle.Colors.green, pystyle.Center.XCenter(f'(+) Found: {exploit} [StatusCode: {str(r.status_code)}] [CriticLevel: {criticlvl}]'), pystyle.Colors.white)
-            else:
-                print(pystyle.Colors.red, pystyle.Center.XCenter(f'(-) Found: {exploit} [StatusCode: {str(r.status_code)}] [CriticLevel: 0]'), pystyle.Colors.white)
 
     def secretfiles(self):
         criticlvl = 1
@@ -47,8 +45,6 @@ class Exploits:
             if r.status_code == 200:
                 self.sfile_nb = self.sfile_nb + 1
                 print(pystyle.Colors.green, pystyle.Center.XCenter(f'(+) Found: {url_} [StatusCode: {str(r.status_code)}] [CriticLevel: {criticlvl}]'), pystyle.Colors.white)
-            else:
-                print(pystyle.Colors.red, pystyle.Center.XCenter(f'(-) Unable To Found: {url_} [StatusCode: {str(r.status_code)}] [CriticLevel: 0]'), pystyle.Colors.white)
 
     def reverseIP(self):
         requ = requests.get("https://api.hackertarget.com/reverseiplookup/?q="+self.url)
@@ -109,10 +105,7 @@ class Exploits:
                     if "sql" in str(r.content):
                         self.exploit_nb = self.exploit_nb + 1
                         print(pystyle.Colors.green, pystyle.Center.XCenter(f'(+) Found: {url_} [StatusCode: {str(r.status_code)}] [CriticLevel: {criticlvl}]'), pystyle.Colors.white)
-                    else:
-                        print(pystyle.Colors.orange, pystyle.Center.XCenter(f'(+) Found: {url_} [StatusCode: {str(r.status_code)}] [CriticLevel: 0]'), pystyle.Colors.white)
-                else:
-                    print(pystyle.Colors.red, pystyle.Center.XCenter(f'(-) Unable To Found: {url_} [StatusCode: {str(r.status_code)}] [CriticLevel: 0]'), pystyle.Colors.white)
+
 def main():
     os.system('cls')
     print(pystyle.Colorate.Horizontal(pystyle.Colors.blue_to_cyan, pystyle.Center.XCenter(blaster), 2))
